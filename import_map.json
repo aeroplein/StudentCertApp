@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "https://deno.land/std/": "https://cdn.jsdelivr.net/gh/denoland/deno_std@0.203.0/"
+  }
+}

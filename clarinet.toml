@@ -1,0 +1,19 @@
+[project]
+name = "studentcertdapp"
+authors = ["Pelin Zeynep Kaya <pelinzeynepkaya@gmail.com>"]
+description = "Blockchain-based student certificate verification platform"
+
+[contracts.certificate]
+path = "contracts/certificate.clar"
+clarity_version = 2.1   # 2 yerine 2.1 yaz
+
+
+[networks.simnet]
+url = "http://localhost:3999"
+
+[networks.testnet]
+url = "https://stacks-node-api.testnet.stacks.co"
+
+[networks.mainnet]
+url = "https://stacks-node-api.mainnet.stacks.co"
+

@@ -1,0 +1,25 @@
+{
+  "name": "studentcertapp",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "tsc",
+    "deploy": "ts-node ./scripts/deploy.ts",
+    "test": "deno test --allow-read --allow-net --unstable certificate_test.ts"
+  },
+  "dependencies": {
+    "@hirosystems/clarinet-sdk": "^3.6.1",
+    "@stacks/network": "^6.13.0",
+    "@stacks/transactions": "^6.13.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "dotenv": "^16.0.0",
+    "std": "^0.1.40"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}
