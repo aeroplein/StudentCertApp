@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StudentCertDApp 🎓
 
 A blockchain-based student identity and educational certificate verification platform built on Stacks blockchain using Clarity smart contracts. Universities and course providers can mint certificates as NFT-like structures, students hold them in their wallets, and third parties (employers) can easily verify certificate authenticity.
@@ -485,3 +486,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Built with ❤️ on Stacks Blockchain**
 
 For questions or support, please [open an issue](https://github.com/your-org/StudentCertDApp/issues) or join our community discussions.
+=======
+# StudentCertApp
+>>>>>>> bcb0e6102fd11151d65661c5030d78ca16563580
