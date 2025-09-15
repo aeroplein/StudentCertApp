@@ -50,19 +50,19 @@
   }
 )
 
-;; Sertifika sahipliği (NFT benzeri yapı)
+;; Sertifika sahipliği (NFT benzeri)
 (define-map certificate-owners
   uint ;; certificate-id
   principal ;; owner
 )
 
-;; Öğrenci sertifikaları (bir öğrencinin sahip olduğu sertifikalar)
+;; Öğrenci sertifikaları
 (define-map student-certificates
   principal ;; student
   (list 50 uint) ;; certificate-ids listesi
 )
 
-;; Kurum sertifikaları (bir kurumun mint ettiği sertifikalar)
+;; Kurum sertifikaları
 (define-map institution-certificates
   principal ;; institution
   (list 100 uint) ;; certificate-ids listesi
@@ -75,7 +75,7 @@
   (<= (len str) max-len)
 )
 
-;; Sertifika ID'sinin geçerliliğini kontrol et
+;; Sertifika ID'sinin geçerliliğini kontrol etme
 (define-private (is-valid-certificate-id (certificate-id uint))
   (and
     (> certificate-id u0)
@@ -134,7 +134,7 @@
   (default-to (list) (map-get? institution-certificates institution))
 )
 
-;; Sertifikanın geçerli olup olmadığını kontrol et (revoke edilmemiş ve süresi dolmamış)
+;; Sertifikanın geçerli olup olmadığını kontrol et 
 (define-read-only (is-certificate-valid (certificate-id uint))
   (match (get-certificate certificate-id)
     certificate-data
@@ -339,4 +339,5 @@
 ;; Transfer işlemi için yardımcı fonksiyon
 (define-private (is-not-transferred-cert (cert-id uint))
   (not (is-eq cert-id certificate-id))
+
 )
